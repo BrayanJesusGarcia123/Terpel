@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="resources/css/sb-admin-2.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-warning sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Barra lado izquierdo terpel  -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3"> Terpel Cucuta</div>
+            </a>
+
+            <!-- Dividir cada seccion  -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Bienvenido Operario</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item bg-gradient-warning">
+                <a class="nav-link collapsed" href="/operario" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="bi bi-house-door"></i>
+                    <span> Inicio </span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/productos" aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="bi bi-ticket-perforated"></i>
+                    <span> Productos </span>
+                </a>
+
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="/agregarventa" aria-expanded="true" aria-controls="collapsePages">
+                    <i class="bi bi-plus-lg"></i>
+                    <span> Registros De Ventas </span>
+                </a>
+
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="/observacion">
+                    <i class="bi bi-dash-circle-fill"></i>
+                    <span> Observacion </span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="/">
+                    <i class="bi bi-x-lg"></i>
+                    <span> Salir </span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder=" Buscar..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Operario </span>
+                                <img class="img-profile rounded-circle" src="resources/img/images.png">
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+
+                    <!-- Content Row -->
+
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-4 col-lg-4">
+                            <div class="card shadow mb-4 ">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary"> REGISTRO DE VENTA </h6>
+
+                                </div>
+
+
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="area">
+                                        <form action="/agg" method="post">
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlInput1" class="form-label"> Producto </label>
+                                            <input type="text" class="form-control" id="exampleFormControlInput1" name="producto">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label"> Galones 
+                                            </label>
+                                            <input type="number" class="form-control" id="exampleFormControlInput1"  name="unidades">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label"> Precio </label>
+                                            <input type="number" class="form-control" id="exampleFormControlInput1"  name="precio">
+                                        </div>
+                                        <div class="mt-4 text-center small">
+                                            <button type="submit" class="btn btn-outline-warning">Enviar </button>
+                                        </div>
+                                   
+                                    </div>
+                                </form>
+                                </div>
+
+
+
+
+                                <div class="card-body chart ">
+                                    <div
+                                        class="chart-area card-header py-3 d-flex flex-row align-items-center justify-content-between ">
+                                        <figure class="">
+                                            <img class="" src="resources/img/Homer.jpg" alt="" width="100%">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+              
+
+            <div class="col-xl-8 col-lg-7">
+                <div class="card shadow mb-4 " id="datos" >
+                    <!-- Card Header - Dropdown -->
+                    <div
+                        class="card-header py-3 d-flex flex-row align-items-center justify-content-between  border-warning ">
+                        <h6 class="m-0 font-weight-bold   text-primary ">Productos Agregados</h6>
+                        
+                    </div>
+
+                    <!-- Card Body -->
+                    <div class="card-body">
+                        <div class="chart "  >
+
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    
+                                    <th scope="col">ID</th>
+                                    <th scope="col">PRODUCTO </th>
+                                    <th scope="col">GALONES  </th>
+                                    <th scope="col"> PRECIO</th>
+                                    <th scope="col"> ACCIONES </th>
+                                 
+                                  </tr>
+                                </thead>
+                               
+                                <tbody>
+                                    <tr>
+                                     
+                                      <% if  (data) {%>
+                                        <% for (var i=0; i < data.length; i++)  { %>
+                                          <tr>
+                                            
+                                            <td><%= (i + 1) %></td>
+                                            <td><%= data[i].producto %></td>
+                                            <td><%= data[i].unidades %></td>
+                                            <td><%= data[i].precio %></td>
+        
+                                            <td>
+                                              <a href="/deleteo/<%= data[i].idoperario %>"  ><button class="btn btn-danger" value='1' >ELIMINAR</button></a>
+                                              <a href="/update/<%= data[i].idoperario %>"  ><button class="btn btn-info" value='2' >ACTUALIZAR</button></a>
+                                            </td>
+                                          </tr>
+                                         
+                                          <% } %>
+                                          <% } %>
+                                 
+                              
+                                    </tbody>
+                                </tr>
+                              </table>
+                              <p>
+                                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci aut quas perspiciatis deleniti sit nisi exercitationem nostrum, inventore sed, in quis amet atque laudantium asperiores! Vero eveniet corporis reiciendis totam!
+                              </p>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Grupo Api 2022</span>
+                    </div>
+                </div>
+            </footer>
+
+       
+
+
+
+
+
+</body>
+
+</html>
